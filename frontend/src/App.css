@@ -1,0 +1,11 @@
+.nav-item .active{
+    font-weight: bold;
+    color: rgb(236, 226, 229) !important;
+    border-bottom: 2px solid rgb(236, 226, 229);
+  }
+
+.error-label{
+    color: crimson;
+    font-size: 15px;
+    margin-left: 10px;
+  }
