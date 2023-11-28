@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const UserRouter = require('./routers/userRouter');
+const NovelRouter = require('./routers/novelRouter');
+const UtilRouter = require('./routers/util');
 
 // initialize express
 const app = express();
@@ -13,6 +15,10 @@ app.use(cors({
 // middleware
 app.use(express.json());
 app.use('/user', UserRouter);
+app.use('/novel', NovelRouter);
+app.use('/util', UtilRouter);
+
+app.use(express.static('./uploads'));
 
 app.get('/', (req,res) => {
     res.send('response from express server');

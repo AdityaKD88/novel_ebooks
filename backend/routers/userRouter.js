@@ -29,7 +29,7 @@ router.get('/getall', (req, res) => {
     });
 });
 
-router.get('/authenticate', (req, res) => {
+router.post('/authenticate', (req, res) => {
     Model.findOne(req.body)
     .then((result) => {
         if(result) res.status(200).json(result);

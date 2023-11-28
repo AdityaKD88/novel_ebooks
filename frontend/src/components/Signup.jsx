@@ -12,7 +12,8 @@ const SignupScheme = Yup.object().shape({
     /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)/,
     'Password must contain at least one uppercase letter, one lowercase letter and one digit'
   ),
-  cpassword: Yup.string().required('Enter confirm password')
+  cpassword: Yup.string().required('Enter confirm password').oneOf(
+    [Yup.ref('password'), null], 'Password does not match')
 });
 
 const Signup = () => {
@@ -41,7 +42,22 @@ const Signup = () => {
       console.log(res.status);
       if(res.status === 200){
         resetForm()
-        enqueueSnackbar()
+        enqueueSnackbar('Registration Successful', {
+          variant: 'success',
+          anchorOrigin: {
+            vertical: 'top',
+            horizontal: 'right'
+          }
+        })
+        navigate('/login')
+      }else{
+        enqueueSnackbar('Something went Wrong', {
+          variant: 'error',
+          anchorOrigin: {
+            vertical: 'top',
+            horizontal: 'right'
+          }
+        })
       }
     },
   
