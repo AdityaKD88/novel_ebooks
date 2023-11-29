@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 import { enqueueSnackbar } from 'notistack';
 import useAppContext from '../AppContext';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const LoginScheme = Yup.object().shape({
   email: Yup.string().required('Emial is required').email('Invalid Email'),
@@ -62,12 +62,14 @@ const Login = () => {
   });
 
   return (
-    <div className='vh-100 bg-body-secondary'>
+    <div className='bg-login'>
       <div className="col-md-4 mx-auto py-5">
         <div className="card">
-          <div className="card-body">
-            <h2 className="text-center my-5">Login</h2>
-
+          <div className="card-header" style={{backgroundColor: '#006494'}}>
+            <h2 className="text-center text-white my-4"><i class="fas fa-user-shield"></i>&nbsp;
+            Login</h2>
+          </div>
+          <div className="card-body" style={{backgroundColor: '#eff6e0'}}>
             <form onSubmit={loginForm.handleSubmit}>
               <label>Email</label>
               <span className="error-label">{loginForm.touched.email && loginForm.errors.email}</span>
@@ -78,6 +80,14 @@ const Login = () => {
 
               <button type='submit' className='btn btn-primary mt-3'>Login</button>
             </form>
+          </div>
+          <div class="card-footer" style={{backgroundColor: '#006494', color:'#eff6e0'}}>
+            <h4 class="text-white">Need an account</h4>
+            
+            <p class="card-text text-white">
+              It's free to join. Continue on to create your account and get to read unlimited books.  
+            </p>
+            <Link class="btn btn-info" to="/signup">Join Free</Link>
           </div>
         </div>
       </div>

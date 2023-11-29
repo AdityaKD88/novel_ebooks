@@ -49,7 +49,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark"> 
+    <nav className="navbar navbar-expand-lg bg-navbar" style={{backgroundColor: '#0d1b2a'}}> 
     <div className="container-fluid">
     <a className="navbar-brand" href="#">
       NovelNebula
@@ -88,7 +88,7 @@ const Navbar = () => {
           placeholder="Search"
           aria-label="Search"
         />
-        <button className="btn btn-outline-success" type="submit">
+        <button className="my-btn" type="submit">
           Search
         </button>
       </form>

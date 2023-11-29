@@ -4,6 +4,7 @@ const mySchema = new Schema({
     title: String,
     author: String,
     price: String,
+    uploadedby: String,
     coverphoto: String,
     book: String
 });

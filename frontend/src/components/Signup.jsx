@@ -1,12 +1,12 @@
 import React from 'react'
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { enqueueSnackbar } from 'notistack';
 
 const SignupScheme = Yup.object().shape({
   name: Yup.string().required('Name is Required').min(3, 'Too short'),
-  email: Yup.string().required('Emial is required').email('Invalid Email'),
+  email: Yup.string().required('Email is required').email('Invalid Email'),
   mobile: Yup.string().required('Mobile number is required').length(10, 'Invalid number'),
   password: Yup.string().required('Enter password').min(6, 'Too short').matches(
     /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)/,
@@ -65,11 +65,14 @@ const Signup = () => {
   });
 
   return (
-    <div className='vh-100 bg-body-secondary'>
+    <div className='vh-100 py-5 bg-signup'>
       <div className="col-md-4 mx-auto py-5">
-        <div className="card">
-          <div className="card-body">
-            <h2 className="text-center my-5">Sign Up</h2>
+        <div className="card shadow-lg">
+          <div className="card-header" style={{backgroundColor: '#006494'}}>
+            <h2 className="text-center text-white my-4"><i class="fas fa-user-shield"></i>&nbsp;
+            Sign Up</h2>
+          </div>
+          <div className="card-body" style={{backgroundColor: '#eff6e0'}}>
 
             <form onSubmit={signupForm.handleSubmit}>
               <label>Full Name</label>
@@ -90,6 +93,9 @@ const Signup = () => {
 
               <button type='submit' className='btn btn-primary mt-3'>Sign Up</button>
             </form>
+          </div>
+          <div class="card-footer" style={{backgroundColor: '#006494'}}>
+            <Link class="btn btn-info" to="/login">Already have account</Link>
           </div>
         </div>
       </div>

@@ -1,8 +1,43 @@
+:root{
+  --main-color: #e0e1dd;
+  --text-color: #0d1b2a;
+  --second-color: #84a98c;
+}
+
+body{
+  background-color: var(--main-color);
+  color: var(--text-color);
+  font-family: 'Patua One';
+  font-size: large;
+}
+
+.nav-link, .navbar-brand{
+  color: var(--second-color);
+}
+
+.navbar-brand:hover, .nav-link:hover{
+  color: var(--main-color);
+}
+
 .nav-item .active{
-    font-weight: bold;
-    color: rgb(236, 226, 229) !important;
-    border-bottom: 2px solid rgb(236, 226, 229);
-  }
+  color: var(--main-color) !important;
+  border-bottom: 2px solid var(--main-color);
+}
+
+.upload-novel-bg{
+  background-image: url('https://media.istockphoto.com/id/1413840933/photo/old-books-on-wooden-shelf-tiled-bookshelf-background-concept-on-the-theme-of-history.webp?b=1&s=170667a&w=0&k=20&c=1Npv4ypDzrRYfcKmz1FpolYgeLWC5ndy9VGcgC7Odvs=');
+  background-size: cover;
+}
+
+.bg-signup{
+  background-image: url('https://images.unsplash.com/photo-1610116306796-6fea9f4fae38?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bm92ZWx8ZW58MHx8MHx8fDA%3D');
+  background-size: cover;
+}
+
+.bg-login{
+  background-image: url('https://images.unsplash.com/photo-1594312915251-48db9280c8f1?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bm92ZWx8ZW58MHx8MHx8fDA%3D');
+  background-size: cover;
+}
 
 .error-label{
     color: crimson;
@@ -20,16 +55,17 @@ header{
 }
 
 .my-btn{
-  width: 150px;
+  width: 140px;
   height: 40px;
   background-color: rgba(255, 255, 255, 0);
-  color: aliceblue;
-  border: 1px solid aliceblue;
+  color: var(--main-color);
+  border-radius: 20px;
+  border: 1px solid var(--main-color);
 }
 
 .my-btn:hover{
-  background-color: aliceblue;
-  color: black;
+  background-color: var(--main-color);
+  color: var(--text-color);
 }
 
 .card-img{
@@ -37,8 +73,17 @@ header{
   object-fit: cover;
 }
 
-.card:hover{
-  border: 2px solid black;
-  background-color: #212529;
-  color: aliceblue;
+.mycard:hover{
+  border: 2px solid var(--text-color);
+  background-color: var(--text-color);
+  color: var(--main-color);
 } 
+
+.no_underline{
+  text-decoration: none;
+}
+
+footer{
+  background-color: var(--text-color);
+  color: var(--main-color);
+}
