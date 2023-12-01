@@ -68,7 +68,7 @@ const Signup = () => {
     <div className='vh-100 py-5 bg-signup'>
       <div className="col-md-4 mx-auto py-5">
         <div className="card shadow-lg">
-          <div className="card-header" style={{backgroundColor: '#006494'}}>
+          <div className="card-header" style={{backgroundColor: '#0d1b2a'}}>
             <h2 className="text-center text-white my-4"><i class="fas fa-user-shield"></i>&nbsp;
             Sign Up</h2>
           </div>
@@ -94,7 +94,7 @@ const Signup = () => {
               <button type='submit' className='btn btn-primary mt-3'>Sign Up</button>
             </form>
           </div>
-          <div class="card-footer" style={{backgroundColor: '#006494'}}>
+          <div class="card-footer" style={{backgroundColor: '#0d1b2a'}}>
             <Link class="btn btn-info" to="/login">Already have account</Link>
           </div>
         </div>

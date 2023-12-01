@@ -65,7 +65,7 @@ const Login = () => {
     <div className='bg-login'>
       <div className="col-md-4 mx-auto py-5">
         <div className="card">
-          <div className="card-header" style={{backgroundColor: '#006494'}}>
+          <div className="card-header" style={{backgroundColor: '#0d1b2a'}}>
             <h2 className="text-center text-white my-4"><i class="fas fa-user-shield"></i>&nbsp;
             Login</h2>
           </div>
@@ -81,7 +81,7 @@ const Login = () => {
               <button type='submit' className='btn btn-primary mt-3'>Login</button>
             </form>
           </div>
-          <div class="card-footer" style={{backgroundColor: '#006494', color:'#eff6e0'}}>
+          <div class="card-footer" style={{backgroundColor: '#0d1b2a', color:'#eff6e0'}}>
             <h4 class="text-white">Need an account</h4>
             
             <p class="card-text text-white">

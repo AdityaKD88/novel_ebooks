@@ -48,17 +48,21 @@ const Books = () => {
                                 <h2>Title: {selBook.title}</h2>
                                 <h4>Author: {selBook.author}</h4>
                                 <h4>Price: {selBook.price}</h4>
+                                <h6>Uploaded By: {selBook.uploadedby}</h6>
                             </div>
                         )
                     }</div>
 
                     <div className="modal-footer">
+                    <a href={"http://localhost:5000/"+selBook.book} target='_blank'>
                     <button
                         type="button"
                         className="btn btn-primary"
                     >
-                        Download
+                        Read Now
                     </button>
+                    </a>
+                    
                     <button
                         type="button"
                         className="btn btn-secondary"

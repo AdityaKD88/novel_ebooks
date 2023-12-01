@@ -19,31 +19,31 @@ const Footer = () => {
             <div className="col-md-2">
               <h4>Social Media</h4>
               <h6 className="mb-3">
-                <i className="fa-brands fa-facebook" />
+                <i className="fa-brands fa-facebook" />&nbsp;
                 <a href="" className="text-white no_underline">
                   Facebook
                 </a>
               </h6>
               <h6 className="mb-3">
-                <i className="fa-brands fa-instagram" />
+                <i className="fa-brands fa-instagram" />&nbsp;
                 <a href="" className="text-white no_underline">
                   Instagram
                 </a>
               </h6>
               <h6 className="mb-3">
-                <i className="fa-brands fa-youtube" />
+                <i className="fa-brands fa-youtube" />&nbsp;
                 <a href="" className="text-white no_underline">
                   YouTube
                 </a>
               </h6>
               <h6 className="mb-3">
-                <i className="fa-brands fa-twitter" />
+                <i className="fa-brands fa-twitter" />&nbsp;
                 <a href="" className="text-white no_underline">
                   Twitter
                 </a>
               </h6>
               <h6 className="mb-3">
-                <i className="fa-brands fa-threads" />
+                <i className="fa-brands fa-threads" />&nbsp;
                 <a href="" className="text-white no_underline">
                   Threads
                 </a>
@@ -52,22 +52,22 @@ const Footer = () => {
             <div className="col-md-5 d-flex flex-column">
               <h4>Address</h4>
               <h6 className="mb-3">
-                <i className="fa-solid fa-house" />
+                <i className="fa-solid fa-house" />&nbsp;
                 <span>Shop No.8 Gurunanak Market Chowk Gurgoun</span>
               </h6>
               <h6 className="mb-3">
-                <i className="fa-regular fa-envelope" />
+                <i className="fa-regular fa-envelope" />&nbsp;
                 <a href="" className="text-white no_underline">
                   {" "}
                   info@novelnebula.com
                 </a>
               </h6>
               <h6 className="mb-3">
-                <i className="fa-solid fa-square-phone" />
+                <i className="fa-solid fa-square-phone" />&nbsp;
                 <span>+91 9876543210</span>
               </h6>
               <h6 className="mb-3">
-                <i className="fa-brands fa-chrome" />
+                <i className="fa-brands fa-chrome" />&nbsp;
                 <a href="" className="text-white no_underline">
                   {" "}
                   www.novelnebula.com

@@ -29,7 +29,7 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li className='nav-item'>
-          <button className='btn btn-danger' onClick={logout}>Logout</button>
+          <button className='my-btn' onClick={logout}>Logout</button>
         </li>
       </>
     }else{

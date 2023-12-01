@@ -7,7 +7,8 @@ import toast from "react-hot-toast";
 const uploadNovelSchema = Yup.object().shape({
   title: Yup.string().required('Title is required'),
   author: Yup.string().required('Author Name is required').min(3, 'Too short'),
-  price: Yup.string().required('Price is required')
+  price: Yup.string().required('Price is required'),
+  uploadedby: Yup.string().required('Enter name')
 });
 
 const UploadNovel = () => {
@@ -19,7 +20,8 @@ const UploadNovel = () => {
     initialValues:{
       title: '',
       author: '',
-      price: ''
+      price: '',
+      uploadedby: ''
     },
 
     onSubmit: async (values, {resetForm}) => {
@@ -98,9 +100,11 @@ const UploadNovel = () => {
     <div className='vh-100 upload-novel-bg'>
       <div className="col-md-4 mx-auto py-5">
         <div className="card">
-          <div className="card-body">
-            <h2 className="text-center my-5">Upload Novel</h2>
-
+          <div className="card-header" style={{backgroundColor: '#0d1b2a'}}>
+            <h2 className="text-center text-white my-4">
+            Upload Novel</h2>
+          </div>
+          <div className="card-body" style={{backgroundColor: '#eff6e0'}}>
             <form onSubmit={uploadNovelForm.handleSubmit}>
               <label>Title</label>
               <span className="error-label">{uploadNovelForm.touched.title && uploadNovelForm.errors.title}</span>
@@ -111,6 +115,9 @@ const UploadNovel = () => {
               <label>Price</label>
               <span className="error-label">{uploadNovelForm.touched.price && uploadNovelForm.errors.price}</span>
               <input type="text" className='form-control mb-3' id='price' onChange={uploadNovelForm.handleChange} value={uploadNovelForm.values.price} />
+              <label>Uploaded By</label>
+              <span className="error-label">{uploadNovelForm.touched.uploadedby && uploadNovelForm.errors.uploadedby}</span>
+              <input type="text" className='form-control mb-3' id='uploadedby' onChange={uploadNovelForm.handleChange} value={uploadNovelForm.values.uploadedby} />
 
               <label>Upload Cover</label>
               <input type="file" className='form-control mb-3' onChange={uploadCover} id='coverPhoto' />
